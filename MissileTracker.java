@@ -22,4 +22,20 @@ public class MissileTracker {
         return tretMissiles;
         //לא בטוח עם היתקבנתה תמיספר שלהם או תתילם עצמם
     }
+    private String[] isOWERORNOTMISEL(String[] drones,int numOfDrones){
+        String[] tretdrones;
+        int numOfTretdrones=0;
+        for (int i = 0; i < numOfDrones; i++) {
+            if (drones[i]=="A" || drones[i]=="IRN"){
+                numOfTretdrones++;
+            }
+        }
+        tretdrones = new String[numOfDrones];
+        for (int i = 0; i < numOfTretdrones; i++) {
+            if (drones[i]=="A"){
+                tretdrones[i]=drones[i];
+            }
+        }
+        return tretdrones;
+    }
 }
